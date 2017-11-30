@@ -1,15 +1,20 @@
 {
-  "name": "tachyons-sass",
-  "description": "Transpiled Sass partials for Tachyons",
-  "author": "John Otander",
-  "version": "4.8.1",
+  "name": "tachyons-custom-sass",
+  "description": "Transpiled Sass partials for Tachyons with custom variable support",
+  "author": {
+    "name": "Andrew O'Brien",
+    "email": "obrien.andrew@gmail.com"
+  },
+  "version": "4.9.0",
   "style": "tachyons.scss",
   "scripts": {
-    "start": "node build.js",
+    "clean": "rm -rf tachyons.scss scss/*",
+    "build": "node build.js",
+    "prepare": "npm run clean && npm run build",
     "test": "ava",
     "lint": "standard --fix"
   },
-  "repository": "tachyons-css/tachyons-sass",
+  "repository": "AndrewO/tachyons-custom-sass",
   "keywords": [
     "tachyons",
     "tachyons-css",
@@ -18,14 +23,22 @@
     "scss"
   ],
   "license": "MIT",
-  "dependencies": {
-    "tachyons": "^4.8.1"
-  },
+  "contributors": [
+    {
+      "name": "adam morse",
+      "email": "hi@mrmrs.cc"
+    },
+    {
+      "name": "john otander",
+      "url": "http://johnotander.com"
+    }
+  ],
   "devDependencies": {
     "ava": "^0.22.0",
     "css-scss": "^0.1.0",
     "glob": "^7.1.2",
     "node-sass": "^4.5.3",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "tachyons-custom": "^4.9.0"
   }
 }

@@ -5,14 +5,14 @@ const glob = require('glob')
 const cssScss = require('css-scss')
 const stream = require('stream')
 
-glob('./node_modules/tachyons/src/**/*.css', (err, files) => {
+glob('./node_modules/tachyons-custom/src/**/*.css', (err, files) => {
   if (err) {
     throw err
   }
 
   files.forEach(file => {
     var css = fs.readFileSync(file, 'utf8')
-    var fileName = file.replace(/(\.\/node_modules\/tachyons\/src\/|\.css)/g, '')
+    var fileName = file.replace(/(\.\/node_modules\/tachyons-custom\/src\/|\.css)/g, '')
 
     if (fileName !== 'tachyons' && fileName !== '_media-queries' && fileName !== '_colors' && fileName !== '_debug') {
       fs.writeFileSync('scss/' + fileName + '.scss', cssScss(css))
@@ -20,7 +20,7 @@ glob('./node_modules/tachyons/src/**/*.css', (err, files) => {
   })
 })
 
-const tachyonsCSS = fs.createReadStream('./node_modules/tachyons/src/tachyons.css')
+const tachyonsCSS = fs.createReadStream('./node_modules/tachyons-custom/src/tachyons.css')
 const tachyonsSCSS = fs.createWriteStream('./tachyons.scss')
 tachyonsCSS.on('data', (data) => {
   const sassStream = new stream.Readable()
