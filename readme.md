@@ -1,11 +1,11 @@
-# tachyons-sass [![Build Status](https://travis-ci.org/tachyons-css/tachyons-sass.svg?branch=master)](https://travis-ci.org/tachyons-css/tachyons-sass)
+# tachyons-custom-sass
 
-Transpiled partials for Tachyons.
+Transpiled partials for Tachyons with custom variable support in order to enable using Tachyons with [Design Tokens](https://medium.com/eightshapes-llc/tokens-in-design-systems-25dd82d58421).
 
 ## Installation
 
 ```bash
-npm install --save tachyons-sass
+npm install --save tachyons-custom-sass
 ```
 
 ## Usage
