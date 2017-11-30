@@ -42,7 +42,9 @@
 }
 
 .nested-copy-seperator p+p {
-  margin-top: $line-height-copyem;
+  // FIX: interpolation needed.
+  // margin-top: $line-height-copyem;
+  margin-top: #{$line-height-copy}em;
 }
 
 .nested-img img {
