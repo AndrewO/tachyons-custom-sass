@@ -8,9 +8,7 @@
   "version": "4.9.0",
   "style": "tachyons.scss",
   "scripts": {
-    "clean": "rm -rf tachyons.scss scss/*",
     "build": "node build.js",
-    "prepare": "npm run clean && npm run build",
     "test": "ava",
     "lint": "standard --fix"
   },
